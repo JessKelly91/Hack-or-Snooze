@@ -67,7 +67,7 @@ function getStarHTML(story, user) {
 /** Gets list of stories from server, generates their HTML, and puts on page. */
 
 function putStoriesOnPage() {
-  console.debug("putStoriesOnPage");
+  // console.debug("putStoriesOnPage");
 
   $allStoriesList.empty();
 
@@ -83,7 +83,7 @@ function putStoriesOnPage() {
 /** Handle deleting a story. */
 
 async function deleteStory(evt) {
-  console.debug("deleteStory");
+  // console.debug("deleteStory");
 
   const $closestLi = $(evt.target).closest("li");
   const storyId = $closestLi.attr("id");
@@ -99,7 +99,7 @@ $ownStories.on("click", ".trash-can", deleteStory);
 /** Handle submitting new story form. */
 
 async function submitNewStory(evt) {
-  console.debug("submitNewStory");
+  // console.debug("submitNewStory");
   evt.preventDefault();
 
   // grab all info from form
@@ -126,7 +126,7 @@ $submitForm.on("submit", submitNewStory);
  */
 
 function putUserStoriesOnPage() {
-  console.debug("putUserStoriesOnPage");
+  // console.debug("putUserStoriesOnPage");
 
   $ownStories.empty();
 
@@ -150,7 +150,7 @@ function putUserStoriesOnPage() {
 /** Put favorites list on page. */
 
 function putFavoritesListOnPage() {
-  console.debug("putFavoritesListOnPage");
+  // console.debug("putFavoritesListOnPage");
 
   $favoritedStories.empty();
 
@@ -170,7 +170,7 @@ function putFavoritesListOnPage() {
 /** Handle favorite/un-favorite a story */
 
 async function toggleStoryFavorite(evt) {
-  console.debug("toggleStoryFavorite");
+  // console.debug("toggleStoryFavorite");
 
   const $tgt = $(evt.target);
   const $closestLi = $tgt.closest("li");
